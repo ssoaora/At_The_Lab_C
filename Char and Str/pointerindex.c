@@ -2,7 +2,7 @@
 
 // 보안문제로 전역변수 앞에 const 붙임
 const char *c[] = { "ENTER", "NEW", "POINT", "FIRST" };
-const char **cp[] = { c * 3, c * 2, c + 1, c };
+const char **cp[] = { c + 3, c + 2, c + 1, c };
 const char*** cpp = cp;
 
 void main()
