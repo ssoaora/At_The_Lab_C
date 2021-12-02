@@ -51,7 +51,7 @@ int main(void)
 	COL = N / 2;
 
 	square[ROW][COL] = 1;		// 1행 정가운데에 1
-	for (int i = 2; i < i <= N * N; i++)
+	for (int i = 2; i <= N * N; i++)
 	{
 		GetNextLocation(&ROW, &COL, N);		// Call by reference
 		square[ROW][COL] = i;
