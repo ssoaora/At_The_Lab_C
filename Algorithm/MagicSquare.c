@@ -1,9 +1,9 @@
 /*
-¸¶¹æÁø ¸¸µå´Â ¹æ¹ý
-1Àº Ã¹¹øÁÙ, °¡¿îµ¥ Ä­¿¡ µÐ´Ù.
-´ÙÀ½ ¼ýÀÚ´Â ÇÑ ÁÙ À§, ÇÑ Ä­ ÁÂÃø¿¡ µÐ´Ù.
--¿µ¿ª ¹Ù±ùÀÎ °æ¿ì, ¿¬°áµÈ °ÍÀ¸·Î »ý°¢ÇÑ´Ù.
-- ¸¸ÀÏ, Ã¤¿ì°íÀÚ ÇÏ´Â À§Ä¡¿¡ ÀÌ¹Ì °ªÀÌ Á¸ÀçÇÏ¸é ÇÑ ÁÙ ¾Æ·¡, °°Àº Ä­¿¡ µÐ´Ù.
+ë§ˆë°©ì§„ ë§Œë“œëŠ” ë°©ë²•
+1ì€ ì²«ë²ˆì¤„, ê°€ìš´ë° ì¹¸ì— ë‘”ë‹¤.
+ë‹¤ìŒ ìˆ«ìžëŠ” í•œ ì¤„ ìœ„, í•œ ì¹¸ ì¢Œì¸¡ì— ë‘”ë‹¤.
+- ì˜ì—­ ë°”ê¹¥ì¸ ê²½ìš°, ì—°ê²°ëœ ê²ƒìœ¼ë¡œ ìƒê°í•œë‹¤.
+- ë§Œì¼, ì±„ìš°ê³ ìž í•˜ëŠ” ìœ„ì¹˜ì— ì´ë¯¸ ê°’ì´ ì¡´ìž¬í•˜ë©´ í•œ ì¤„ ì•„ëž˜, ê°™ì€ ì¹¸ì— ë‘”ë‹¤.
 */
 
 #define _CRT_SECURE_NO_WARNINGS
@@ -38,19 +38,19 @@ void GetNextLocation(int *ROW, int *COL, int N)
 int main(void)
 {
 	int N, ROW, COL;
-	printf("Magic SquareÀÇ ÇÑ ÂÊ Å©±â(N:È¦¼ö) : ");
+	printf("Magic Squareì˜ í•œ ìª½ í¬ê¸°(N:í™€ìˆ˜) : ");
 	scanf("%d", &N);
 
 	if (N % 2 == 0)
 	{
-		printf("È¦¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä!\n");
+		printf("í™€ìˆ˜ë¥¼ ìž…ë ¥í•˜ì„¸ìš”!\n");
 		return 1;
 	}
 
 	ROW = 0;
 	COL = N / 2;
 
-	square[ROW][COL] = 1;		// 1Çà Á¤°¡¿îµ¥¿¡ 1
+	square[ROW][COL] = 1;		// 1í–‰ ì •ê°€ìš´ë°ì— 1
 	for (int i = 2; i <= N * N; i++)
 	{
 		GetNextLocation(&ROW, &COL, N);		// Call by reference
